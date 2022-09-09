@@ -7,13 +7,17 @@ This app is used to Convert amount of transactions from one currency to another.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+
+Just copy this library to your file
+```dart
+import 'package:live_currency_rate/live_currency_rate.dart';
+```
+
+and then
+Run the following code
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
 ```dart
  CurrencyRate rate = await LiveCurrencyRate.convertCurrency("USD", "AED", 500);
@@ -35,3 +39,10 @@ Working on it.. it doesnt convert becuase we have not Define CORS in the server 
 Please wait for further updates. 
 
 
+You can use all the currency Codes such as :
+- AED
+- PKR
+- INR
+- USD
+
+- And many others
