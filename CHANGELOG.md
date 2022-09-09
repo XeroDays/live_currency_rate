@@ -1,3 +1,4 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+Init Package
+- Convert Amount from one currency to another Currency with updated rates

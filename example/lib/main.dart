@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:live_currency_rate/livecurrencyrate.dart';
+import 'package:live_currency_rate/live_currency_rate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() async {
-    var sss = await LiveCurrencyRate.convertCurrency(
+    CurrencyRate rate = await LiveCurrencyRate.convertCurrency(
         "USD", "PKR", _counter.toDouble());
 
     setState(() {
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
-    print(sss.message);
+    print(rate.result);
   }
 
   @override
