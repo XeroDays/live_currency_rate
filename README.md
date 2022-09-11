@@ -1,9 +1,15 @@
 
-This app is used to Convert amount of transactions from one currency to another.
+This package is used to convert amount of currency from one currency exchange to another.
+
+You will get live currency Exchange rates.
+
+
 
 ## Features
 
-- 
+- Get Live Currency Exchange Rates
+- Exchange currency ammount from one to another.
+- Used to convert In-App-Purchase currency to Defualt currency for Admin Dashboard.
 
 ## Getting started
 
