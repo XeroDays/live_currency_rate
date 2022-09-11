@@ -37,12 +37,13 @@ We use https so that it may take some while.
 Try using the Async function to get rates
 
 Avalable for
--  iOS        : YES
--  Android    : YES
--  Web        : NO
+-  iOS        : ✅ 
+-  Android    : ✅ 
+-  Web        : 🚫
 
-Working on it.. it doesnt convert becuase we have not Define CORS in the server yet. 
+Working on it.. it doesnt convert because we have not Define CORS in the server side yet. 
 Please wait for further updates. 
+
 
 
 You can use all the currency Codes such as :
