@@ -5,10 +5,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class LiveCurrencyRate {
+  /// Convert Currency
+  /// currentCurrency: Currency Code you want to transfer from : USD
+  /// toCurrency: Currency Code you want to transfer to : CAD
+  /// price: Amount of currency you want to calucalte Forexample : 1
   static Future<CurrencyRate> convertCurrency(
       String currentCurrency, String toCurrency, double price) async {
     final uri = Uri.parse(
-        'https://api.skysoltech.com/Currency/$currentCurrency/$toCurrency/$price');
+        'https://api.softasium.com/Currency/$currentCurrency/$toCurrency/$price');
     final headers = {"Authorization": "iamsyedidrees", "Content-Lenght": "0"};
     // Map<String, dynamic> body = {'id': 21, 'name': 'bob'};
     // String jsonBody = json.encode(body);
