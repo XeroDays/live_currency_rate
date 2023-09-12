@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBar(title: Text("Live Currency App Demo")),
+      appBar: AppBar(title: const Text("Live Currency App Demo")),
       body: InkWell(
         onTap: () async {
           setState(() {
@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
               await LiveCurrencyRate.convertCurrency("USD", "PKR", 1);
 
           setState(() {
-            rates = rate.result.toString();
+            rates = "1 USD  =  ${rate.result} PKR";
             isLoading = false;
           });
         },
@@ -53,20 +53,30 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
                 width: size.width,
-                child: Text(
+                child: const Text(
                   "USD to PKR",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 22),
                 )),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             isLoading
-                ? CircularProgressIndicator()
-                : Container(
-                    child: Text(
-                      "Rates  : " + rates,
-                    ),
+                ? const CircularProgressIndicator()
+                : Column(
+                    children: [
+                      const Text(
+                        "Real-Time Current Rate",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        rates,
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.normal),
+                      ),
+                    ],
                   ),
           ],
         ),

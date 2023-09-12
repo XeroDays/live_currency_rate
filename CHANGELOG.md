@@ -9,3 +9,9 @@ Init Package
 Server API updated
 - API Link updated
 - Example App UI Updated
+
+## 1.0.3
+
+- Server API Updated
+- Example application fixed
+- Headers added to POST Request
