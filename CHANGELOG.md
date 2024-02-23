@@ -15,3 +15,13 @@ Server API updated
 - Server API Updated
 - Example application fixed
 - Headers added to POST Request
+
+## 1.0.4
+
+- Minor API related Bug Fixes
+
+
+## 1.0.5
+
+- health check post request added
+- timeout can now be handled as required

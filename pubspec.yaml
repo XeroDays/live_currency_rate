@@ -1,6 +1,6 @@
 name: live_currency_rate
 description: Package which connects to the Skysol Server and Live Currency Rate changes. Used to Get Rates of currency or convert rates from one currency to other.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/XeroDays/live_currency_rate
 
 environment:
@@ -16,5 +16,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
-flutter:
