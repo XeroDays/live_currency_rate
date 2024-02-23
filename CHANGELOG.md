@@ -15,3 +15,7 @@ Server API updated
 - Server API Updated
 - Example application fixed
 - Headers added to POST Request
+
+## 1.0.4
+
+- Minor API related Bug Fixes
