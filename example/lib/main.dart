@@ -45,6 +45,7 @@ class _HomeState extends State<Home> {
               await LiveCurrencyRate.convertCurrency("USD", "PKR", 1);
 
           setState(() {
+            print(rate.message);
             rates = "1 USD  =  ${rate.result} PKR";
             isLoading = false;
           });

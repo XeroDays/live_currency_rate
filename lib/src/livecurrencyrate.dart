@@ -15,8 +15,7 @@ class LiveCurrencyRate {
         'https://api.softasium.com/Currency/$currentCurrency/$toCurrency/$price');
     final headers = {
       "Authorization": "iamsyedidrees",
-      "Content-Lenght": "0",
-      "Content-Type": "text/html",
+      "Accept": "*/*",
     };
     // Map<String, dynamic> body = {'id': 21, 'name': 'bob'};
     // String jsonBody = json.encode(body);
