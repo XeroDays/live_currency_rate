@@ -5,33 +5,51 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class LiveCurrencyRate {
+  static const String _baseUrl = 'https://api.softasium.com/Currency';
+
+  static bool _healthCheck = false;
+
   /// Convert Currency
   /// currentCurrency: Currency Code you want to transfer from : USD
   /// toCurrency: Currency Code you want to transfer to : CAD
   /// price: Amount of currency you want to calucalte Forexample : 1
   static Future<CurrencyRate> convertCurrency(
-      String currentCurrency, String toCurrency, double price) async {
-    final uri = Uri.parse(
-        'https://api.softasium.com/Currency/$currentCurrency/$toCurrency/$price');
+      String currentCurrency, String toCurrency, double price,
+      {int? timeOutSeconds}) async {
+    final uri = Uri.parse('$_baseUrl/$currentCurrency/$toCurrency/$price');
     final headers = {
       "Authorization": "iamsyedidrees",
       "Accept": "*/*",
     };
-    // Map<String, dynamic> body = {'id': 21, 'name': 'bob'};
-    // String jsonBody = json.encode(body);
 
     try {
-      http.Response response = await http
-          .post(
-        uri,
-        headers: headers,
-      )
-          .timeout(
-        const Duration(seconds: 5),
-        onTimeout: () {
-          return http.Response("", 300);
-        },
-      );
+      if (!_healthCheck) {
+        http.Response statusHealthResponse = await http.post(
+          Uri.parse('$_baseUrl/health'),
+          headers: headers,
+        );
+        if (statusHealthResponse.statusCode == 200) {
+          _healthCheck = true;
+        }
+      }
+
+      //if timeout is not null then add timeout else without timeout post request
+      http.Response response = timeOutSeconds != null
+          ? await http
+              .post(
+              uri,
+              headers: headers,
+            )
+              .timeout(
+              Duration(seconds: timeOutSeconds),
+              onTimeout: () {
+                return http.Response("", 300);
+              },
+            )
+          : await http.post(
+              uri,
+              headers: headers,
+            );
 
       int statusCode = response.statusCode;
       String responseBody = response.body;
