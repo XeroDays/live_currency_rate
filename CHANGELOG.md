@@ -20,6 +20,10 @@ Server API updated
 
 - Minor API related Bug Fixes
 
+## 1.0.4
+
+- Minor API related Bug Fixes
+
 
 ## 1.0.5
 
