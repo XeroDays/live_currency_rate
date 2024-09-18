@@ -35,3 +35,7 @@ Server API updated
 ## 1.0.6
 
 - Images added in readme
+
+## 1.0.7
+
+- Github Actions configured

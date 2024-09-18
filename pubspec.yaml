@@ -1,6 +1,6 @@
 name: live_currency_rate
 description: Package which connects to the Skysol Server and Live Currency Rate changes. Used to Get Rates of currency or convert rates from one currency to other.
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/XeroDays/live_currency_rate
 
 environment:
