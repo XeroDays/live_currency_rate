@@ -6,8 +6,8 @@ You will get live currency Exchange rates.
 ## Gallery
 
 <div style="display:flex">
-<code><img height="500px" src="https://raw.githubusercontent.com/XeroDays/live_currency_rate/master/images/Live%20currency%20rate%20app%20start.png"></code> 
-<code><img height="500px" src="https://raw.githubusercontent.com/XeroDays/live_currency_rate/master/images/Live%20currency%20app%20process.png"></code>
+<code><img height="400px" src="https://raw.githubusercontent.com/XeroDays/live_currency_rate/master/images/Live%20currency%20rate%20app%20start.png"></code> 
+<code><img height="400px" src="https://raw.githubusercontent.com/XeroDays/live_currency_rate/master/images/Live%20currency%20app%20process.png"></code>
 </div>
 
 ## Features
