@@ -30,3 +30,8 @@ Server API updated
 - health check post request added
 - timeout can now be handled as required
 - windows support added
+
+
+## 1.0.6
+
+- Images added in readme
