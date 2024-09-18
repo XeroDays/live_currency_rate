@@ -26,7 +26,8 @@ jobs:
       - name: dart - dry run
         run: flutter pub publish --dry-run
         working-directory: ${{ inputs.working-directory }}
+        continue-on-error: true
       # Publishing...
-      # - name: Publish to pub.dev
-      #   run: flutter pub publish -f
-      #   working-directory: ${{ inputs.working-directory }}
+      - name: Publish to pub.dev
+        run: flutter pub publish -f
+        working-directory: ${{ inputs.working-directory }}
