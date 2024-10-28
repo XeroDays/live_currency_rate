@@ -2,7 +2,19 @@
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
+
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
+
 
 class LiveCurrencyRate {
   static const String _baseUrl = 'https://api.softasium.com/Currency';
@@ -14,8 +26,10 @@ class LiveCurrencyRate {
   /// toCurrency: Currency Code you want to transfer to : CAD
   /// price: Amount of currency you want to calucalte Forexample : 1
   static Future<CurrencyRate> convertCurrency(
+    
       String currentCurrency, String toCurrency, double price,
       {int? timeOutSeconds}) async {
+        HttpOverrides.global = MyHttpOverrides();
     final uri = Uri.parse('$_baseUrl/$currentCurrency/$toCurrency/$price');
     final headers = {
       "Authorization": "iamsyedidrees",
@@ -68,6 +82,7 @@ class LiveCurrencyRate {
             result: 0);
       }
     } catch (e) {
+      print("Error : $e"); 
       return CurrencyRate(
           message:
               "Error  :  Failed hitting api, Unable to connect to the server. or Server not available/active. Please Try again later!",

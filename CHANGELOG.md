@@ -39,3 +39,8 @@ Server API updated
 ## 1.0.7
 
 - Github Actions configured
+
+## 1.0.8
+
+- Certificate issue resolved
+- Unable to connect to server issue resolved
