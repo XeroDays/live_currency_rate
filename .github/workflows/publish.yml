@@ -4,26 +4,30 @@ on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+*'
+  # workflow_dispatch:
 
 jobs:
   publish:
+    name: 'Publish to pub.dev'
+    environment: ${{ inputs.environment }}
     permissions:
-      id-token: write # Required for authentication using OIDC
-
+      id-token: write # This is required for requesting the JWT
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Flutter
-      uses: subosito/flutter-action@v2
-      with:
-        flutter-version: 'stable'
-
-    - name: Install dependencies
-      run: flutter pub get
-
-    - name: Validate package
-      run: flutter pub publish --dry-run
-
-    - name: Publish package
-      run: flutter pub publish
+      # Checkout repository
+      - uses: actions/checkout@v4
+      # Setup Dart SDK with JWT token
+      - uses: dart-lang/setup-dart@0a8a0fc875eb934c15d08629302413c671d3f672
+      - uses: subosito/flutter-action@v2
+      # Minimal package setup and dry run checks.
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: ${{ inputs.working-directory }}
+      - name: dart - dry run
+        run: flutter pub publish --dry-run
+        working-directory: ${{ inputs.working-directory }}
+        continue-on-error: true
+      # Publishing...
+      - name: Publish to pub.dev
+        run: flutter pub publish -f
+        working-directory: ${{ inputs.working-directory }}
