@@ -3,6 +3,9 @@ This package is used to convert amount of currency from one currency exchange to
 
 You will get live currency Exchange rates.
 
+### Pub Dev Website
+https://pub.dev/packages/live_currency_rate
+
 ## Gallery
 
 <div style="display:flex">
