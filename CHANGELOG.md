@@ -1,3 +1,7 @@
+## 1.0.10
+
+- Design change in the example app
+
 ## 1.0.9
 
 - Example app redesigned minimal UI
