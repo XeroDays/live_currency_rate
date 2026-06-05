@@ -44,15 +44,13 @@ Run the following code
 We use https so that it may take some while.
 Try using the Async function to get rates
 
-Avalable for
+Available on
 -  iOS        : ✅ 
 -  Android    : ✅ 
--  Web        : 🚫
-
-Working on it.. it doesnt convert because we have not Define CORS in the server side yet. 
-Please wait for further updates. 
-
-
+-  Web        : ✅ 
+-  Windows    : ✅ 
+-  Linux      : ✅ 
+-  macOS      : ✅ 
 
 You can use all the currency Codes such as :
 - AED

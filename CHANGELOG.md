@@ -1,29 +1,22 @@
-## 1.0.0
+## 1.0.9
 
-Init Package
-- Convert Amount from one currency to another Currency with updated rates
+- Example app redesigned minimal UI
+- Updated dependencies for compatibility with newer Flutter SDK versions
+- Debug banner removed from the example app
+- README updated: Web, Windows, Linux, and macOS documented as supported (CORS fixed for Web)
 
+## 1.0.8
 
-## 1.0.2
+- Certificate issue resolved
+- Unable to connect to server issue resolved
 
-Server API updated
-- API Link updated
-- Example App UI Updated
+## 1.0.7
 
-## 1.0.3
+- Github Actions configured
 
-- Server API Updated
-- Example application fixed
-- Headers added to POST Request
+## 1.0.6
 
-## 1.0.4
-
-- Minor API related Bug Fixes
-
-## 1.0.4
-
-- Minor API related Bug Fixes
-
+- Images added in readme
 
 ## 1.0.5
 
@@ -31,16 +24,27 @@ Server API updated
 - timeout can now be handled as required
 - windows support added
 
+## 1.0.4
 
-## 1.0.6
+- Minor API related Bug Fixes
 
-- Images added in readme
+## 1.0.4
 
-## 1.0.7
+- Minor API related Bug Fixes
 
-- Github Actions configured
+## 1.0.3
 
-## 1.0.8
+- Server API Updated
+- Example application fixed
+- Headers added to POST Request
 
-- Certificate issue resolved
-- Unable to connect to server issue resolved
+## 1.0.2
+
+Server API updated
+- API Link updated
+- Example App UI Updated
+
+## 1.0.0
+
+Init Package
+- Convert Amount from one currency to another Currency with updated rates
