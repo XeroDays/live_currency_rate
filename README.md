@@ -9,8 +9,8 @@ https://pub.dev/packages/live_currency_rate
 ## Gallery
 
 <div style="display:flex">
-<code><img height="500px" src="https://raw.githubusercontent.com/XeroDays/live_currency_rate/master/images/Live%20currency%20rate%20app%20start.png"></code> 
-<code><img height="500px" src="https://raw.githubusercontent.com/XeroDays/live_currency_rate/master/images/Live%20currency%20app%20process.png"></code>
+<code><img width="494" height="699" alt="image" src="https://github.com/user-attachments/assets/753b077e-0a46-41ae-bb0d-36fc7579c5a4" />
+</code>  
 </div>
 
 ## Features
